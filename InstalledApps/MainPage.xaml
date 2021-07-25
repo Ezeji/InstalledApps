@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:InstalledApps.Extension"
+             x:Class="InstalledApps.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Hi, There!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        
+        <ListView ItemsSource="{Binding InstalledApps}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                                <Image WidthRequest="60" HeightRequest="60">
+                                    <Image.Source>
+                                        <local:PackageNameSource PackageName="{Binding PackageName}" />
+                                    </Image.Source>
+                                </Image>
+
+                                <Label Text="{Binding AppName}" FontSize="Medium" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </StackLayout>
+
+</ContentPage>

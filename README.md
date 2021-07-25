@@ -1,3 +1,2 @@
 # InstalledApps
-This project provides code snippet for fetching icons and names of installed applications in an android device.
-Xamarin Forms template was used to build the application in Visual Studio 2019.
+Xamarin Forms template in Visual Studio 2019 was used for this project to build a simple android application that fetches list of names and icons for installed apps on an android device.
